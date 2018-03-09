@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[测试]]></title>
+    <url>%2F2018%2F03%2F09%2F%E6%B5%8B%E8%AF%95%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[独立像素比(window.devicePixelRatio)]]></title>
+    <url>%2F2018%2F03%2F09%2Findex%2F</url>
+    <content type="text"><![CDATA[首先从物理分辨率和逻辑分辨率说起，物理分辨率，顾名思义是显示屏固有的参数，是指显示屏最高可显示的像素值。一个设备的分辨率不会大于物理分辨率。这里千万不要和屏幕的物理尺寸弄混淆，这里的物理尺寸是指用实际的量具（比如尺子）测量的大小。而且分辨率只是一个相对单位是不可度量的，同样的分辨率在可以在不同大小（物理尺寸）的设备上体现出来，结果就是屏幕越小显示出来的画面就越精细。逻辑分辨率就是软件所支持的分辨率就是全屏状态下的可视区域,它与显卡输出的逻辑点相对应，刚开始的时候，物理分辨率与逻辑分辨率是一致的，但随着硬件技术的提高，物理分辨率成倍增长。几个专用词意思：PPI:是Pixels Per Inch缩写，pixels per inch所表示的是每英寸所拥有的像素（pixel）数目。PPI=Math.sqrt(Math.pow(1334,2)+Math.pow(750,2)) / 4.7 ≈ 325 dpr:dpr(devicePixelRatio)=物理分辨率/逻辑分辨率.下面这张图协助了解: window.devicePixelRatio:返回的就是该设备的dpr了。 制作移动端页面时通常会加上: 下文摘自与:https://zhuanlan.zhihu.com/p/26131956 那么什么是 viewport？ viewport 通常是指用户网页的可视区域，简称”视区“。但是我们这里讨论的 viewport 不仅是这个概念。我们不妨把 viewport 分为 layout viewport、visual viewport 和 ideal viewport 三个概念。 在移动设备上，layout viewport 并不局限于浏览器可视区域 visual viewport 的大小，可以比浏览器的可视区域大，也可以比浏览器的可视区域小。默认情况下的 viewport 是 layout viewport，它的宽度通常大于浏览器可视区域，也可以说是大于移动设备的 dips 宽度。 需要注意的是，这个没有设置任何 viewport 相关 meta 的情况下，如果当前页面的 layout viewport 大于移动设备的 dips 宽度，为了使得页面不出现横向滚动条，提高用户体验，移动设备通常会自动给整个网页设置一个默认的缩放值来缩小页面。这就是为什么我们看到一些不是响应式的网站在移动设备如 iphone 和 ipad 中会以整体缩小到刚好布满整个屏幕的形式展现。 对于已经做好响应式的站点，默认的 layout viewport 宽度就不合时宜了，因为这些站点经过优化在移动设备宽度下也可以正常显示，这时候我们需要一个 ideal viewport，可以通过 width=device-width 来设置 layout viewport 等于设备的 dips 宽度来获得 ideal viewport。 但是还不够，在 iphone 和 ipad 上，无论你给 viewport 设的宽度是多少，如果没有指定默认的缩放值，则 iphone 和 ipad 会自动计算这个缩放值，以达到当前页面不会出现横向滚动条的目的。所以我们还要设置 initial-scale=1 来保证网页在浏览器中一开始就根据屏幕尺寸 1：1 缩放或扩大。需要注意的是，设置 initial-scale=1 其实是让 dips 像素与 CSS 像素的比例达到 1：1。单独通过这个设置也会把当前的 viewport 变为 ideal viewport。]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2018%2F03%2F08%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+</search>

@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[js中call与apply]]></title>
+    <url>%2F2018%2F03%2F16%2Fcall-apply%2F</url>
+    <content type="text"><![CDATA[apply()方法调用具有给定this值的函数，并arguments以数组(或类数组的对象)的形式提供。call()方法使用给定的this值和单独提供的参数来调用函数。 语法:func.apply(thisArg,[argsArray])参数thisArg 可选的。this为呼叫提供的值func。请注意，该方法this可能不是实际值:如果该方法是非严格模式代码中的函数，null和undefined将替换为全局对象，并且原始值将被装箱，给定失败。argsArray 可选的。数组或类数组对象，用于指定func应该调用的参数，null或undefined则不向该函数提供参数。 返回值用指定的this值和参数调用函数的结果。]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[obj.defineProperty]]></title>
+    <url>%2F2018%2F03%2F13%2FdefineProtperty%2F</url>
+    <content type="text"><![CDATA[Object.defineProperty()&lt;\a&gt;方法会直接在一个对象上定义一个新属性，或修改一个对象的现有属性，并返回这个对象。 语法Object.defineProperty(obj,prop,descriptor) 参数obj:要在其上定义属性的对象prop:要定义或修改的属性的名称descriptor:将被定义或修改的属性描述符 ##属性描述符对象里目前存在的属性描述符有两种主要形式：数据描述符和存取描述符。数据描述符是一个具有值的属性，该值可能是可写的，也可能不是可写的。存取描述符是由getter-setter函数对描述的属性。描述符必须是这两种形式之一；不能同时是两者。configurabel:为true时，该属性描述符才能够被改变，同时该属性也能从对应的对象上被删除。默认为 false。enumerable:为true时，该属性才能够出现在对象的枚举属性中。默认为false。 ####数据描述符同时具有以下可选键值：value：该属性的对应值。可以是任何js值。默认为undefined。writable:为true时，value才能被赋值运算符改变。默认为 false。 ####存取描述符同时具有以下可选键值：get:给该属性提供getter的方法，如果没有getter则为undefined。该方法的返回值被用作属性值。默认为undefined。set:一个给属性提供setter的方法，如果没有setter则为undefined。该方法将接受唯一参数，并将该参数的新值分配给该属性。默认为 undefined。 ##描述符可同时具有的键值： 创建属性不同方式添加属性 var o = {}; o.a = 1; // 等同于 : Object.defineProperty(o, &quot;a&quot;, { value : 1, writable : true, configurable : true, enumerable : true }); // 另一方面， Object.defineProperty(o, &quot;a&quot;, { value : 1 }); // 等同于 : Object.defineProperty(o, &quot;a&quot;, { value : 1, writable : false, configurable : false, enumerable : false }); 数据和视图联动给对象o定义新的属性a，并且定义属性b的get和set方法，当o.a的时候会调用a属性的get方法，给a属性赋值的时候，会调用set方法，这就是修改数据的时候，视图会自动更新的关键。 用原生js的defineProperty写一个双向数据绑定 &lt;input type=&quot;text&quot; id=&quot;text1&quot; /&gt; &lt;input type=&quot;text&quot; id=&quot;text2&quot; /&gt; var input1 = document.querySelector(&quot;#text1&quot;); var input2 = document.querySelector(&quot;#text2&quot;); var data = {}; Object.defineProperty(data, &quot;name&quot;, { configurable: true, get: function(){ console.log(1111); return input1.value }, set: function(newValue){ console.log(222); input1.value = newValue; input2.value = newValue; } }) data.name = &quot;sss&quot;; input1.onchange = function(){ console.log(33333) data.name = this.value; } input2.onchange = function(){ input1.value = this.value; console.log(data); }]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[测试]]></title>
     <url>%2F2018%2F03%2F09%2F%E6%B5%8B%E8%AF%95%2F</url>
     <content type="text"></content>
